@@ -1,0 +1,30 @@
+﻿@page
+@model PracticeBank.Pages.BankModel
+@{
+}
+<h1>Alla Suppliers</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">NatinalID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Adress</th>
+            <th scope="col">City</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var supp in Model.Suppliers)
+        {
+            <tr>
+                <td>@supp.Id</td>
+                <td>@supp.NationalID</td>
+                <td>@supp.Name</td>
+                <td>@supp.Adress</td>
+                <td>@supp.City</td>
+            </tr>
+        }
+    </tbody>
+</table>
